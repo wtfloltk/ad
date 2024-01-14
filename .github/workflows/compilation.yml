@@ -40,6 +40,7 @@ jobs:
   
         - name: Compile project
           run: | 
+            chmod +x *.sh
             ./build_daedalus.sh CTR
             ./build_cia.sh
   
