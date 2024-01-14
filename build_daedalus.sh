@@ -37,4 +37,3 @@ esac
     # Use the custom define to do initial build then parse cmake after
     $CMAKE $CMAKEDEFINES -S . -B build 
     cmake --build build -j${PROC_NR}
-    cmake --install build --prefix $PWD
