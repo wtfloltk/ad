@@ -48,16 +48,12 @@ jobs:
           id: slug
           run: echo "{name}={sha8::$(echo ${GITHUB_SHA} | cut -c1-8)}" >> $GITHUB_OUTPUT
   
-        - name: Prepare artifacts
-          run: |
-            tar -zcvf daedalusX64-CTR.tar.gz DaedalusX64\
-  
         - name: Upload artifacts
           if: ${{ success() }}
           uses: actions/upload-artifact@v4
           with:
-            name: daedalusX64-CTR
-            path: daedalusX64-CTR.tar.gz
+            name: source
+            path: .
         
         - name: Upload artifacts
           if: ${{ success() }}
@@ -66,9 +62,3 @@ jobs:
             name: daedalusX64-CTRbuild
             path: build
 
-        - name: Upload artifacts
-          if: ${{ success() }}
-          uses: actions/upload-artifact@v4
-          with:
-            name: thankyooou
-            path: DaedalusX64\
