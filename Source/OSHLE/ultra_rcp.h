@@ -251,19 +251,19 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #define AI_STATUS_FIFO_FULL	0x80000000
 #define AI_STATUS_DMA_BUSY	0x40000000
 
-#define AI_MAX_DAC_RATE         16384
+#define AI_MAX_DAC_RATE         16384*6
 #define AI_MIN_DAC_RATE         132
 
-#define AI_MAX_BIT_RATE         16
+#define AI_MAX_BIT_RATE         16*6
 #define AI_MIN_BIT_RATE         2
 
-#define AI_NTSC_MAX_FREQ        368000
+#define AI_NTSC_MAX_FREQ        368000*6
 #define AI_NTSC_MIN_FREQ        3000
 
-#define AI_PAL_MAX_FREQ         376000
+#define AI_PAL_MAX_FREQ         376000*6
 #define AI_PAL_MIN_FREQ         3050
 
-#define AI_MPAL_MAX_FREQ        368000
+#define AI_MPAL_MAX_FREQ        368000*6
 #define AI_MPAL_MIN_FREQ        3000
 
 
